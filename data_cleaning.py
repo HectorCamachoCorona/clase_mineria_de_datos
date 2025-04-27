@@ -15,7 +15,7 @@ import pandas as pd
 uploaded = files.upload()
 
 def cargar_y_limpiar_datos(ruta_csv: str) -> pd.DataFrame:
-    df = pd.read_csv(ruta_csv)  # Ya no usamos sep='\t'
+    df = pd.read_csv(ruta_csv)
 
     df['year'] = pd.to_datetime(df['year'], format='%Y')
 
